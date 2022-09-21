@@ -9,7 +9,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '15'
+          java-version: ['8', '13', '15']
           distribution: 'adopt'
+          os: [ubuntu-latest, windows-latest]
       - name: Test
         run: mvn test
